@@ -6,10 +6,14 @@
 sudo apt-get install git
 
 # mininet install 
-cd /usr/local/src
-git clone git://github.com/mininet/mininet
-cd mininet
-./util/install.sh -n3V 2.5.0
+mininet_folder="/usr/local/src/mininet"
+if [  ! -d "$mininet_folder" ];then
+    cd /usr/local/src
+	git clone git://github.com/mininet/mininet
+	cd mininet
+	./util/install.sh -n3V 2.5.0
+fi
+
 
 
 ## sudo mn --test pingall (used for mininet install test)
@@ -22,13 +26,17 @@ sudo apt-get install python-webob
 sudo apt-get install python-paramiko
 
 
-cd /usr/local/src
-git clone git://github.com/osrg/ryu.git
+ryu_folder="/usr/local/src/ryu"
 
-cd ryu 
+if [  ! -d "$ryu_folder" ];then
+    cd /usr/local/src
+	git clone git://github.com/osrg/ryu.git
+	cd ryu 
+	sudo pip install -r tools/pip-requires
+	sudo python setup.py install 
+fi
 
-sudo pip install -r tools/pip-requires
-sudo python setup.py install 
+
 sudo ryu-manager 
 
 
