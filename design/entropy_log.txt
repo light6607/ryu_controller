@@ -1,0 +1,369 @@
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+
+before calculate:
+{}
+{}
+
+after cal0
+{}
+{}
+0
+

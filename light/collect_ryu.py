@@ -9,13 +9,7 @@ import time
 import numpy as np
 
 
-#-----------------
-#write to file
-#record all in instance
-#-----------------
-
-
-filename = "features"
+filename = "collect.log"
 
 
 class MyMonitor13(app_manager.RyuApp):
@@ -105,7 +99,7 @@ class MyMonitor13(app_manager.RyuApp):
         self.rcd[4] = chg_flow
         self.rcd[5] = chg_sip
 
-        file = open(filename, 'ab')  # a = zhui jia
+        file = open(filename, 'ab')  # a is like >> and b is byte
         strs = ''
         n = 0
         while n < len(self.rcd):

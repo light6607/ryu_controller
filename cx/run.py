@@ -27,3 +27,8 @@ if __name__ == '__main__':
     else:
         print('please check argv')
         exit()
+
+
+# python run.py 
+# ryu-manager l3_learning_3_2.py feature_extractor.py --observe-links
+# ryui-manager l3_learning_3_2.py monitor.py --observe-links
