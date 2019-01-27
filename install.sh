@@ -1,6 +1,7 @@
 #!/bin/bash
 # author:light(jialiang) 2019.1.18
-# just the code
+# used for the ryu and mininet install 
+# just run this script 
 
 
 sudo apt-get install git

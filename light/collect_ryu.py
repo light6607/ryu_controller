@@ -99,7 +99,7 @@ class MyMonitor13(app_manager.RyuApp):
         self.rcd[4] = chg_flow
         self.rcd[5] = chg_sip
 
-        file = open(filename, 'ab')  # a is like >> and b is byte
+        file = open(filename, 'ab')  # a is like >> , and b is byte
         strs = ''
         n = 0
         while n < len(self.rcd):
