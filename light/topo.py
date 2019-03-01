@@ -110,3 +110,5 @@ if __name__ == '__main__':
     setLogLevel( 'info' )
     myNetwork()
 
+
+# 胖树形 拓扑， 每个交换机下5台主机。
