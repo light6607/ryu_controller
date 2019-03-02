@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*
 
 from mininet.net import Mininet
 from mininet.node import Controller, RemoteController, OVSController
