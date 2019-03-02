@@ -10,7 +10,7 @@ def GetData(dir='./collect1.log'):
     label0 = []
     label1 = []
     with open(dir,'r',encoding='utf-8')as f:
-        d=f.readline().strip()
+        d = f.readline().strip()
         while d:
             line=[float(i) for i in d.split()]
             label=line[-1]
@@ -59,6 +59,7 @@ def GetAcc(pre_y,test_label):
 def classification(train_data,train_label,test_data,test_label):
     model = SVC(C=0.1)
     model.fit(train_data, train_label)
+    # 为了python2版本能够识别
     joblib.dump(model, './model_tf.m', protocol=2)
 
     pre_y0 = model.predict(train_data)
