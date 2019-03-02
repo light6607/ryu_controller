@@ -59,7 +59,7 @@ def GetAcc(pre_y,test_label):
 def classification(train_data,train_label,test_data,test_label):
     model = SVC(C=0.1)
     model.fit(train_data, train_label)
-    joblib.dump(model, './model_tf.m')
+    joblib.dump(model, './model_tf.m', protocol=2)
 
     pre_y0 = model.predict(train_data)
     pre_y1 = model.predict(test_data)

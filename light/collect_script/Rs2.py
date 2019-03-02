@@ -1,6 +1,8 @@
 '''
 random send packet
 '''
+# -*- coding: utf-8 -*
+
 from scapy.all import *
 import random
 import time
