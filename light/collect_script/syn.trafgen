@@ -36,9 +36,10 @@
   /* IPv4 Checksum (IP header from, to) */
   csumip(14, 33),
 
-  /* NEED ADJUST */
+  /* NEED ADJUST * 根据ip网段进行调整/
   192, 168, drnd(2), # Source IP
-  121, 0, 0, 1, # Dest IP
+  192, 168, drnd(2), # Dest IP
+
 
   /* TCP Source Port */
   //drnd(2),
