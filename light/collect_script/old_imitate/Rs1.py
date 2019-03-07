@@ -62,6 +62,7 @@ class RandomSend():
         #pkt.show()
         send(pkt,count=random.randint(1,5))
 
+
     def sendtcp(self, data='hello_world'):
         src_ip = self.getSrcAddress()
         #src_ip = '10.0.0.13'
@@ -74,6 +75,7 @@ class RandomSend():
         pkt = IP(src=src_ip, dst=dst_ip) / fuzz(TCP(sport=src_port, dport=dst_port)) /data
         #pkt.show()
         send(pkt,count=random.randint(1,5))
+
 
     def sendudp(self, data='hello_world'):
         src_ip = self.getSrcAddress()
