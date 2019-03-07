@@ -109,6 +109,7 @@ class RandomSend():
         else :
             self.sendicmp(data)
 
+
 if __name__ == '__main__':
     print(conf.iface)
     conf.iface = 's1'

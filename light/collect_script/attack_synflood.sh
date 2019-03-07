@@ -1,1 +1,1 @@
-sudo ./trafgen --cpp --dev s2 --conf syn.trafgen --gap 5000
+sudo ./trafgen --cpp --dev s3 --conf syn.trafgen --gap 7000
