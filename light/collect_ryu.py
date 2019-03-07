@@ -1,4 +1,5 @@
 # -*- coding: UTF-8 -*-
+# -*- coding: UTF-8 -*-
 from ryu.base import app_manager
 from ryu.controller.handler import set_ev_cls
 from ryu.controller.handler import MAIN_DISPATCHER, DEAD_DISPATCHER, CONFIG_DISPATCHER
@@ -32,7 +33,7 @@ class MyMonitor13(app_manager.RyuApp):
         rcd:
         | time | avg_pkt_num | avg_pkt_byte | chg_ports | chg_flow | chg_sip |
         '''
-        self.rcd = [0, 0, 0, 0, 0, 0]
+        self.rcd = [0, 0, 0, 0, 0, 0, 0]
         self.temp_pkt_num = 0
         self.temp_pkt_byte = 0
         self.temp_ports = 0
@@ -98,6 +99,8 @@ class MyMonitor13(app_manager.RyuApp):
         self.rcd[3] = chg_ports
         self.rcd[4] = chg_flow
         self.rcd[5] = chg_sip
+        self.rcd[6] = 1
+        # 
 
         file = open(filename, 'ab')  # a is like >> , and b is byte
         strs = ''
