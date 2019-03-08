@@ -38,8 +38,7 @@
 
   /* NEED ADJUST */
   192, 168, drnd(2), # Source IP
-  192, 168, drnd(2), # Dest IP
-
+  121, 0, 0, 1, # Dest IP
 
   /* TCP Source Port */
   //drnd(2),
