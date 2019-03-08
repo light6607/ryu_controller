@@ -101,10 +101,10 @@ class Feature_Collector(app_manager.RyuApp):
         featureStr = ''
         n = 0
         while n < len(self.pkt_feature):
-            featureStr += str(self.pkt_feature[n]) + ','
+            featureStr += str(self.pkt_feature[n]) + ' '
             n += 1
-        file.write(featureStr + '1\n')
-        print(featureStr + '\n\n')
+        file.write(featureStr + '\n')
+        # print(featureStr + '\n\')
         file.close()
 
         # record this period flow feature
