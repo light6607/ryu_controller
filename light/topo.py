@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# -*- coding: UTF-8 -*-
 # 定义实验基本网络拓扑
 from mininet.net import Mininet
 from mininet.node import Controller, RemoteController, OVSController
