@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 from sklearn import svm               # svm函数需要的
 import numpy as np                    # numpy科学计算库
 from sklearn import model_selection

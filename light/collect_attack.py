@@ -1,5 +1,4 @@
 # -*- coding: UTF-8 -*-
-# -*- coding: UTF-8 -*-
 from ryu.base import app_manager
 from ryu.controller.handler import set_ev_cls
 from ryu.controller.handler import MAIN_DISPATCHER, DEAD_DISPATCHER, CONFIG_DISPATCHER
