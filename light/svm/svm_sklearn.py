@@ -1,10 +1,11 @@
-import tensorflow as tf
+# -*- coding: UTF-8 -*-
+#import tensorflow as tf
 from sklearn.linear_model import LinearRegression
 from sklearn.svm import SVC
 from sklearn.externals import joblib
 
 import random
-def GetData(dir='./collect1.log'):
+def GetData(dir='./collect_310.log'):
     data0 = []
     data1 = []
     label0 = []
@@ -63,7 +64,7 @@ def classification(train_data,train_label,test_data,test_label):
     model = SVC(C=0.1)
     model.fit(train_data, train_label)
     # 为了python2版本能够识别
-    joblib.dump(model, './model_tf_3.8.m', protocol=2)
+    joblib.dump(model, './model_tf_310.m', protocol=2)
 
     pre_y0 = model.predict(train_data)
     pre_y1 = model.predict(test_data)
