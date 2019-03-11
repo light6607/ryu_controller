@@ -10,6 +10,7 @@ from sklearn.externals import joblib
 import datetime
 import numpy as np
 import time
+from light import detect_config
 
 
 filename = "detected.log"
@@ -105,9 +106,8 @@ class MyMonitor13(app_manager.RyuApp):
         # rcd[6]代表的发起的是正常流量
         # 时间， 1，2，3，4，5， 发起的流量类型，检测的结果类型，是否一致
 
-        clf = joblib.load("./svm/model_tf_310.m")
+        clf = joblib.load(detect_config.model_dir)
         start_time = time.time()
-
 
         vec = np.array(self.rcd[1:6]).reshape(1, -1)
         result = clf.predict(vec)

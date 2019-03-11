@@ -1,7 +1,8 @@
 #!/bin/bash
 # author:light(jialiang) 2019.1.18
 # used for the ryu and mininet install 
-# just run this script 
+# just run this script
+# pycharm git support
 
 
 sudo apt-get install git
