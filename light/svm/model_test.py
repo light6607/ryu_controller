@@ -4,10 +4,13 @@ import numpy as np
 # from sklearn import model_selection
 # import numpy as np
 import datetime
+import time
 
 if __name__ == '__main__':
     starttime = datetime.datetime.now()
 
+    start_time = time.time()
+    # print(start_time)
     clf = joblib.load("./model_tf_310.m")
 
     # data = [[0.019076305, 316.2105263, 97.1, 97.8, 94.1],
@@ -17,7 +20,8 @@ if __name__ == '__main__':
     # data = [0.0131034482759, 5.49862068966, 144.3, 144.8, 139.2]
     data = [0.0348837209302 ,9.64631782946 ,143.3 ,143.2 ,139.4 ]
     vec = np.array(data).reshape(1, -1)
-
+    elapse_time = time.time() - start_time
+    print(elapse_time)
     result = clf.predict(vec)
     whether_attck = result[0]
     print(whether_attck)

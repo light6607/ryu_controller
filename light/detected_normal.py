@@ -107,23 +107,24 @@ class MyMonitor13(app_manager.RyuApp):
 
 
         clf = joblib.load("./svm/model_tf_310.m")
-        starttime = datetime.datetime.now()
+        # starttime = datetime.datetime.now()
+        start_time = time.time()
 
         vec = np.array(self.rcd[1:6]).reshape(1, -1)
         result = clf.predict(vec)
         self.rcd[7] = result[0]
 
         endtime = datetime.datetime.now()
-        duration = endtime-starttime
+        duration = time.time()-start_time
 
-        duration_str = str(endtime-starttime).split('.')[1][:3]
+        # duration_str = str(endtime-starttime).split('.')[1][:3]
 
         if self.rcd[6] == self.rcd[7]:
             self.rcd[8] = 'correct'
         else:
             self.rcd[8] = 'wrong'
 
-        self.rcd[9] = duration_str
+        self.rcd[9] = duration
 
         file = open(filename, 'ab')  # a is like >> , and b is byte
         strs = ''
