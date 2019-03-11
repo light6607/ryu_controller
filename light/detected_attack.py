@@ -104,16 +104,16 @@ class MyMonitor13(app_manager.RyuApp):
         # rcd[6]代表的发起的是正常流量
         # 时间， 1，2，3，4，5， 发起的流量类型，检测的结果类型，是否一致
 
-        clf = joblib.load("./svm/model_tf.m")
+        clf = joblib.load("./svm/model_tf_310.m")
 
         vec = np.array(self.rcd[1:6]).reshape(1, -1)
         result = clf.predict(vec)
         self.rcd[7] = result[0]
 
         if self.rcd[6] == self.rcd[7]:
-            self.rcd[8] = 'match'
+            self.rcd[8] = 'correct'
         else:
-            self.rcd[8] = 'unmatch'
+            self.rcd[8] = 'wrong'
 
         # 
 
