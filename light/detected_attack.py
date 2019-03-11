@@ -105,16 +105,24 @@ class MyMonitor13(app_manager.RyuApp):
         # 时间， 1，2，3，4，5， 发起的流量类型，检测的结果类型，是否一致
 
         clf = joblib.load("./svm/model_tf_310.m")
+        starttime = datetime.datetime.now()
+
 
         vec = np.array(self.rcd[1:6]).reshape(1, -1)
         result = clf.predict(vec)
         self.rcd[7] = result[0]
+
+        endtime = datetime.datetime.now()
+        duration = endtime - starttime
+
+        duration_str = str(endtime - starttime).split('.')[1][:3]
 
         if self.rcd[6] == self.rcd[7]:
             self.rcd[8] = 'correct'
         else:
             self.rcd[8] = 'wrong'
 
+        self.rcd[9] = duration_str
         # 
 
         file = open(filename, 'ab')  # a is like >> , and b is byte

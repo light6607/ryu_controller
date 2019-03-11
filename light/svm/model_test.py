@@ -27,5 +27,6 @@ if __name__ == '__main__':
         print("not attack")
 
     endtime = datetime.datetime.now()
+    print(endtime-starttime)
+    print("耗时时间为 " + str(endtime-starttime).split('.')[1][:3] + " ms")
 
-    print("耗时时间为 " + str(endtime-starttime))

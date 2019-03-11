@@ -35,7 +35,7 @@ class MyMonitor13(app_manager.RyuApp):
         rcd:
         | time | avg_pkt_num | avg_pkt_byte | chg_ports | chg_flow | chg_sip |
         '''
-        self.rcd = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+        self.rcd = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         self.temp_pkt_num = 0
         self.temp_pkt_byte = 0
         self.temp_ports = 0
@@ -107,16 +107,23 @@ class MyMonitor13(app_manager.RyuApp):
 
 
         clf = joblib.load("./svm/model_tf_310.m")
+        starttime = datetime.datetime.now()
 
         vec = np.array(self.rcd[1:6]).reshape(1, -1)
         result = clf.predict(vec)
         self.rcd[7] = result[0]
+
+        endtime = datetime.datetime.now()
+        duration = endtime-starttime
+
+        duration_str = str(endtime-starttime).split('.')[1][:3]
 
         if self.rcd[6] == self.rcd[7]:
             self.rcd[8] = 'correct'
         else:
             self.rcd[8] = 'wrong'
 
+        self.rcd[9] = duration_str
 
         file = open(filename, 'ab')  # a is like >> , and b is byte
         strs = ''
