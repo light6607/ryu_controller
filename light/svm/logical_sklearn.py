@@ -1,8 +1,9 @@
 # -*- coding: UTF-8 -*-
-import tensorflow as tf
+# import tensorflow as tf
 from sklearn.linear_model import LinearRegression
-from sklearn.svm import SVC
+# from sklearn.svm import SVC
 from sklearn.externals import joblib
+from sklearn.linear_model import LogisticRegression
 
 import random
 def GetData(dir='./collect_310.log'):
@@ -63,11 +64,11 @@ def GetAcc(pre_y,test_label):
 def classification(train_data,train_label,test_data,test_label):
     # model = SVC(C=0.1)
     # 旧版本，使用线性核提高了计算精度
-    model = SVC(C=0.5, kernel='linear')
-
+    # model = SVC(C=0.5, kernel='linear')
+    model = LogisticRegression()
     model.fit(train_data, train_label)
     # 为了python2版本能够识别
-    joblib.dump(model, './model_tf_svm.m', protocol=2)
+    joblib.dump(model, './model_tf_logical.m', protocol=2)
 
     pre_y0 = model.predict(train_data)
     pre_y1 = model.predict(test_data)
