@@ -1,5 +1,5 @@
 from sklearn.externals import joblib
-# from sklearn import svm
+# from sklearn import model
 import numpy as np
 # from sklearn import model_selection
 # import numpy as np

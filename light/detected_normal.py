@@ -106,7 +106,7 @@ class MyMonitor13(app_manager.RyuApp):
         #时间， 1，2，3，4，5， 发起的流量类型，检测的结果类型，是否一致
 
 
-        clf = joblib.load("./svm/model_tf_310.m")
+        clf = joblib.load("./model/model_tf_310.m")
         # starttime = datetime.datetime.now()
         start_time = time.time()
 
