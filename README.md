@@ -19,7 +19,7 @@ todolist:
 - 分别比对了各自的准确率以及识别效率（根据代码级的time时间进行计算）
 - merge test
 
-- git merge tes1mastert
+Creating a new branch is quick and simple.
 
 
 
