@@ -20,6 +20,7 @@ todolist:
 - svm的检测效率是最高的，同时三者的准确率都非常不错，后续便效率上选高个儿了
 - 解决merge 的流程 如何解决分布式,gitingore test，make some merge
 - branch
+- branch test from branch-test branch  
 
 
 
