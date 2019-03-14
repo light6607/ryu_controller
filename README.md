@@ -19,7 +19,7 @@ todolist:
 - 分别比对了各自的准确率以及识别效率（根据代码级的time时间进行计算）
 - svm的检测效率是最高的，同时三者的准确率都非常不错，后续便效率上选高个儿了
 - 解决merge 的流程 如何解决分布式,gitingore test，make some merge
-- branch
+- branch zsh
 - branch test from branch-test branch  
 - 解决merge 的流程 如何解决分布式,gitingore test，make some merge，ignore尝试
 
