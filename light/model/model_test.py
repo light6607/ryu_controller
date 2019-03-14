@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+
 from sklearn.externals import joblib
 # from sklearn import model
 import numpy as np
