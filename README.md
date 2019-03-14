@@ -21,6 +21,7 @@ todolist:
 - 解决merge 的流程 如何解决分布式,gitingore test，make some merge
 - branch
 - branch test from branch-test branch  
+- 解决merge 的流程 如何解决分布式,gitingore test，make some merge，ignore尝试
 
 
 
