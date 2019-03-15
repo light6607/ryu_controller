@@ -10,7 +10,7 @@ from sklearn.externals import joblib
 import datetime
 import numpy as np
 import time
-from model import detect_config
+import detect_config
 
 filename = "detected.log"
 
