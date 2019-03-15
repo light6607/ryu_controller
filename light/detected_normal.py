@@ -6,7 +6,7 @@ from ryu.controller import ofp_event
 from ryu.lib import hub
 from ryu.lib.packet import in_proto
 import time
-from light import detect_config
+from model import detect_config
 
 
 from sklearn.externals import joblib

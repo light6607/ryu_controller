@@ -7,6 +7,8 @@ import numpy as np
 # import numpy as np
 import datetime
 import time
+import pickle
+
 
 # 主要用于对比多个模型的预测耗时 即模型的检测效率
 
@@ -61,6 +63,7 @@ if __name__ == '__main__':
     print("randomForest检测耗时为:" + str(float(elapse_time * 1000)) + "ms")
 
     clf = joblib.load("./model_tf_logical.m")
+    # clf = pickle.load("./model_tf_logical.m")
     start_time = time.time()
     # data = [[0.019076305, 316.2105263, 97.1, 97.8, 94.1],
     #         [0.972222222,194.3611111, 4.1, 3.4, 1.4, 1]]
