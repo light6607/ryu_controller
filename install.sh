@@ -41,7 +41,7 @@ fi
 
 sudo ryu-manager 
 
-
+# test
 ## ryu visual
 #  #ryu-manager --verbose --observe-links ryu.topology.switches ryu.app.rest_topology ryu.app.ofctl_rest ryu.app.simple_switch
 # attention : open another terminal and run 
