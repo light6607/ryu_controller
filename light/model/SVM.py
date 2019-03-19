@@ -1,5 +1,4 @@
 # -*- coding: UTF-8 -*-
-import tensorflow as tf
 from sklearn.linear_model import LinearRegression
 from sklearn.svm import SVC
 from sklearn.externals import joblib
@@ -10,7 +9,7 @@ def GetData(dir='./collect_310.log'):
     data1 = []
     label0 = []
     label1 = []
-    with open(dir,'r',encoding='utf-8')as f:
+    with open(dir,'r')as f:
         d = f.readline().strip()
         while d:
             # 时间 时间 五特征 是否攻击
