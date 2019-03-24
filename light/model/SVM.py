@@ -4,7 +4,7 @@ from sklearn.svm import SVC
 from sklearn.externals import joblib
 
 import random
-def GetData(dir='./collect_310.log'):
+def GetData(dir='./collect_324.log'):
     data0 = []
     data1 = []
     label0 = []
