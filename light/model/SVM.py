@@ -4,7 +4,7 @@ from sklearn.svm import SVC
 from sklearn.externals import joblib
 
 import random
-def GetData(dir='./collect_324.log'):
+def GetData(dir='./collect_data.log'):
     data0 = []
     data1 = []
     label0 = []
@@ -47,7 +47,7 @@ def GetData(dir='./collect_324.log'):
     return train_data,train_label,test_data, test_label
 
 
-def GetAcc(pre_y,test_label):
+def GetAcc(pre_y, test_label):
     acc = 0.
     for i in range(len(test_label)):
         if pre_y[i] >= 0.5:
@@ -59,13 +59,10 @@ def GetAcc(pre_y,test_label):
     print('accuracy is:', acc / len(test_label))
 
 
-def classification(train_data,train_label,test_data,test_label):
-    # model = SVC(C=0.1)
-    # 旧版本，使用线性核提高了计算精度
+def classification(train_data, train_label, test_data, test_label):
+    # 核函数利用线形核，
     model = SVC(C=0.5, kernel='linear')
-
     model.fit(train_data, train_label)
-    # 为了python2版本能够识别
     joblib.dump(model, './model_tf_svm.m', protocol=2)
 
     pre_y0 = model.predict(train_data)

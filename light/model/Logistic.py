@@ -1,12 +1,11 @@
 # -*- coding: UTF-8 -*-
-# import tensorflow as tf
 from sklearn.linear_model import LinearRegression
 # from sklearn.model import SVC
 from sklearn.externals import joblib
 from sklearn.linear_model import LogisticRegression
 
 import random
-def GetData(dir='./collect_324.log'):
+def GetData(dir='./collect_data.log'):
     data0 = []
     data1 = []
     label0 = []
