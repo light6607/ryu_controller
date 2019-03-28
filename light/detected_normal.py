@@ -126,6 +126,12 @@ class MyMonitor13(app_manager.RyuApp):
         else:
             self.rcd[8] = 'wrong'
 
+        if self.rcd[7] == 1:
+            self.rcd[7] == 'attack'
+        else:
+            self.rcd[7] == 'normal'
+
+
         self.rcd[9] = duration
 
         file = open(filename, 'ab')  # a is like >> , and b is byte

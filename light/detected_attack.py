@@ -122,6 +122,12 @@ class MyMonitor13(app_manager.RyuApp):
         else:
             self.rcd[8] = 'wrong'
 
+        # 将检测时间转化为Attack or not attack
+        if self.rcd[7] == 1:
+            self.rcd[7] == 'attack'
+        else:
+            self.rcd[7] == 'normal'
+
         self.rcd[9] = duration
         # 
 
