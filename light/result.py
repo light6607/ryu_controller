@@ -9,13 +9,17 @@ if __name__ == '__main__':
     flow_mode = []
     check_result=[]
     self_jude=[]
-    with open('detected.log', 'r') as f:
+    with open('detected_svm.log', 'r') as f:
         for one in f.readlines():
             # print(one)
             data = one.split()
             # print(data[7])
             flow_mode.append(int(float(data[7])))
-            check_result.append(int(float(data[8])))
+	    if data[8] == 'normal':
+		check_result.append(0)
+	    else:
+		check_result.append(1)
+            #check_result.append(int(float(data[8])))
             time_array.append(float(data[10]))
             self_jude.append(data[9])
     #print(flow_mode)
@@ -35,7 +39,7 @@ if __name__ == '__main__':
     # print(total_normal)
 
     normal_error_rate = normal_error/total_normal *100
-    print("误报率为：" + str(normal_error_rate) + '%')
+    print("正常流量误报率为：" + str(normal_error_rate) + '%')
 
 
 
@@ -52,7 +56,7 @@ if __name__ == '__main__':
     #print(total_attack)
     attack_reg_wrong_rate = float(attack_wrong/total_attack) *100
     #print(attack_reg_rate)
-    print("识别率" + str(attack_reg_wrong_rate) + "%")
+    print("异常流量误报率" + str(attack_reg_wrong_rate) + "%")
 
 
 

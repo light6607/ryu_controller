@@ -2,9 +2,11 @@
 from sklearn.linear_model import LinearRegression
 from sklearn.svm import SVC
 from sklearn.externals import joblib
+from sklearn.ensemble import RandomForestClassifier
+
 
 import random
-def GetData(dir='./collect_310.log'):
+def GetData(dir='./collect_data.log'):
     data0 = []
     data1 = []
     label0 = []
@@ -47,7 +49,7 @@ def GetData(dir='./collect_310.log'):
     return train_data,train_label,test_data, test_label
 
 
-def GetAcc(pre_y, test_label):
+def GetAcc(pre_y,test_label):
     acc = 0.
     for i in range(len(test_label)):
         if pre_y[i] >= 0.5:
@@ -59,11 +61,13 @@ def GetAcc(pre_y, test_label):
     print('accuracy is:', acc / len(test_label))
 
 
-def classification(train_data, train_label, test_data, test_label):
-    # 核函数利用线形核，
-    model = SVC(C=0.5, kernel='linear')
+def classification(train_data,train_label,test_data,test_label):
+    # model = SVC(C=0.1)
+    # model = SVC(C=0.5, kernel='linear')
+    model = RandomForestClassifier(n_jobs=-1, n_estimators=20, max_features=3, max_depth=5)
     model.fit(train_data, train_label)
-    joblib.dump(model, './model_tf_svm.m', protocol=2)
+    # 为了python2版本能够识别
+    joblib.dump(model, './model_tf_forest.m', protocol=2)
 
     pre_y0 = model.predict(train_data)
     pre_y1 = model.predict(test_data)
@@ -74,3 +78,4 @@ def classification(train_data, train_label, test_data, test_label):
 if __name__ == '__main__':
     train_data, train_label,test_data,test_label=GetData()
     classification(train_data,train_label,test_data,test_label)
+
