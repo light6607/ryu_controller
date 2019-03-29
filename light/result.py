@@ -23,7 +23,7 @@ if __name__ == '__main__':
     #print(time_array)
     #print(self_jude)
 
-    # 误报率，正常流量中却报为错误
+    # 正常流量误报率，正常流量中却报为错误
     normal_error = 0
     total_normal = 0
     for i in range(len(flow_mode)):
@@ -39,20 +39,20 @@ if __name__ == '__main__':
 
 
 
-    # 识别率 ，异常流量正确被检测
-    attack_right=0
+    # 异常流量误报率
+    attack_wrong=0
     total_attack=0
     for i in range(len(flow_mode)):
         if flow_mode[i] == 1:
             total_attack +=1
-            if check_result[i] == 1 :
-                attack_right += 1
+            if check_result[i] == 0 :
+                attack_wrong += 1
     
     #print(attack_right)
     #print(total_attack)
-    attack_reg_rate = float(attack_right/total_attack) *100
+    attack_reg_wrong_rate = float(attack_wrong/total_attack) *100
     #print(attack_reg_rate)
-    print("识别率" + str(attack_reg_rate) + "%")
+    print("识别率" + str(attack_reg_wrong_rate) + "%")
 
 
 
@@ -62,7 +62,7 @@ if __name__ == '__main__':
         if item == "correct":
             i +=1
     rate = i / len(self_jude) *100
-    print("总体正确率" + str(rate) + "%")
+    print("准确率" + str(rate) + "%")
 
     # 统计平均耗时
     total_cost = 0
