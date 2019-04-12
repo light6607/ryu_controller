@@ -2,6 +2,6 @@
 # 修改该配置文件来更改识别模型
 
 # svm 识别模型
-#model_dir = "./model/model_tf_svm.m"
+model_dir = "./model/model_tf_svm.m"
 # 随机森林识别模型
-model_dir = "./model/model_tf_forest.m"
+#model_dir = "./model/model_tf_forest.m"

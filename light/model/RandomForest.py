@@ -78,4 +78,7 @@ def classification(train_data,train_label,test_data,test_label):
 if __name__ == '__main__':
     train_data, train_label,test_data,test_label=GetData()
     classification(train_data,train_label,test_data,test_label)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 41b204e06ea827f84d2556ad7ceb168e4dea12bc
