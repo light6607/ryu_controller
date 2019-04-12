@@ -5,7 +5,7 @@ from sklearn.externals import joblib
 from sklearn.linear_model import LogisticRegression
 
 import random
-def GetData(dir='./collect_data.log'):
+def GetData(dir='./collect_310.log'):
     data0 = []
     data1 = []
     label0 = []
