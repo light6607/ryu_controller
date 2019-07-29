@@ -60,7 +60,7 @@ def GetAcc(pre_y, test_label):
 
 
 def classification(train_data, train_label, test_data, test_label):
-    # 核函数利用线形核，
+    # using the linear functions as kernel functions
     model = SVC(C=0.5, kernel='linear')
     model.fit(train_data, train_label)
     joblib.dump(model, './model_tf_svm.m', protocol=2)
